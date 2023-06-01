@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Main Product Page -->
+    <div class="main-container" id="main">
+      <!-- Header Section -->
+      <header class="main-page-header">
+        <section>
+          <img class="header-logo" src="./assets/images/Header_Logo.svg" />
+          <p class="header-text-top">Featured Collection</p>
+          <p class="header-text-bottom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            pulvinar ac tortor imperdiet commodo.
+          </p>
+        </section>
+        <button id="cartButton">
+          <img
+            class="cart-logo"
+            src="./assets/images/shopping-bag.svg"
+            width="23"
+            height="29"
+          />
+          <div>
+            <!-- Product count will dynamically update using JavaScript -->
+            <span class="cart-quantity" id="cart-quantity">0</span>
+          </div>
+        </button>
+      </header>
+
+      <!-- Product Section -->
+      <div class="container-xl">
+        <div class="row" id="products-container">
+          <!-- Products will be dynamically added here -->
+        </div>
+      </div>
+
+      <!-- Static Content Section -->
+      <section class="static-page-wrapper container-xl">
+        <div class="static-container-1">
+          <p class="static-text-top">Made For You</p>
+          <p class="static-text-bottom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            pulvinar ac tortor imperdiet commodo.
+          </p>
+          <button class="static-page-learn-more-btn">LEARN MORE</button>
+        </div>
+        <div class="static-container-2">
+          <img
+            src="./assets/images/Fashion_Design_2.png"
+            width="406"
+            height="251"
+          />
+        </div>
+        <div class="static-container-3">
+          <img src="./assets/images/Fashion_Design_4.png" />
+          <div class="static-container-3-text-area">
+            <p class="static-text-top">FIND YOUR SPARKLE.</p>
+            <p class="static-text-bottom">SHOP OUR PRODUCTS ></p>
+          </div>
+        </div>
+        <div class="static-container-4">
+          <img
+            src="./assets/images/Fashion_Design_1.png"
+            width="297"
+            height="191"
+          />
+        </div>
+        <div class="static-container-5">
+          <img
+            src="./assets/images/Fashion_Design_3.png"
+            width="556"
+            height="518"
+          />
+        </div>
+      </section>
+
+      <!-- Overlay when cart appears -->
+      <div id="overlay" class="overlay"></div>
+    </div>
+
+    <!-- Cart Section -->
+    <aside id="cartSection" class="cart-container navbar h-100 h-custom">
+      <!-- Cart Header -->
+      <header class="cart-header">
+        <div class="cart-header-text">
+          <h2>YOUR BAG</h2>
+          <h5 id="cart-header-text-quantity">(0 ITEM)</h5>
+        </div>
+        <button class="close-cart" id="closeCart"></button>
+      </header>
+
+      <span class="line"></span>
+
+      <!-- Cart Items -->
+      <ul id="cart" class="list-group">
+        <!-- Cart items will be dynamically added here -->
+      </ul>
+
+      <!-- Cart Footer -->
+      <footer>
+        <div class="cart-footer-top">
+          <span>SUBTOTAL</span>
+          <span id="cart-total-value">$0</span>
+        </div>
+        <button class="cart-footer-checkout-btn">CHECKOUT</button>
+        <div class="cart-footer-bottom">
+          <span>
+            Have a promo code? Enter your code at checkout. Shipping & taxes are
+            calculated during checkout.
+          </span>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- Custom JavaScript -->
+    <script src="./index.js"></script>
+  </body>
+</html>
