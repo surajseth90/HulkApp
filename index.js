@@ -111,8 +111,6 @@ function addToCartClickListener(event) {
   if (quantity == 0) {
     //if product is not present in the cart
     var cartItem = document.createElement("li");
-    var line = document.createElement("span");
-    line.classList.add("product-line");
     cartItem.classList.add("list-group-item");
     cartItem.innerHTML = `
     <div class="cart-item-body" data-product-id=${product.id}>
@@ -163,7 +161,6 @@ function addToCartClickListener(event) {
     totalPrice.textContent = `$${(
       product.price + +totalPrice.textContent.split("$")[1]
     ).toFixed(2)}`;
-    if (nodeCount > 0) cart.appendChild(line);
     cart.appendChild(cartItem);
   } else {
     //To increase the quantity if the product is already present in the cart
